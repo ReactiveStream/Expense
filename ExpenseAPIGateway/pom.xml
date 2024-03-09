@@ -9,25 +9,50 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.expense</groupId>
-	<artifactId>EurekaServer</artifactId>
+	<artifactId>ExpenseAPIGateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>EurekaServer</name>
-	<description>Eureka Server</description>
+	<name>ExpenseAPIGateway</name>
+	<description>EurekaAPIGateway</description>
 	<properties>
 <maven.compiler.source>1.8</maven.compiler.source>
 <maven.compiler.target>1.8</maven.compiler.target>
 <spring-cloud.version>Hoxton.SR11 </spring-cloud.version>
 	</properties>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
+<dependency>
+    <groupId>org.springframework.security.oauth</groupId>
+    <artifactId>spring-security-oauth2</artifactId>
+    <version>2.5.2.RELEASE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-jwt -->
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-jwt</artifactId>
+    <version>1.1.1.RELEASE</version>
+</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -39,6 +64,18 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>

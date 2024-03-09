@@ -1,0 +1,1 @@
+keytool -genkeypair -v -keystore sutiexpense.jks -keyalg RSA -keysize 2048 -validity 365 -alias expensejwt
