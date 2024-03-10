@@ -5,10 +5,10 @@ FROM openjdk:8-jre-alpine
 WORKDIR /app
 
 # Copy the application JAR file into the container at /app
-COPY target/EurekaServer-0.0.1-SNAPSHOT.jar /app/EurekaServer-0.0.1-SNAPSHOT.jar
+COPY target/ExpenseAPIGateway-0.0.1-SNAPSHOT.jar /app/ExpenseAPIGateway-0.0.1-SNAPSHOT.jar
 
 # Expose the port the application runs on
 EXPOSE 8080
 
 # Specify the command to run on container startup
-CMD ["java", "-jar", "EurekaServer-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "ExpenseAPIGateway-0.0.1-SNAPSHOT.jar"]
